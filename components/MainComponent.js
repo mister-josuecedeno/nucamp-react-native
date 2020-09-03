@@ -26,25 +26,13 @@ const DirectoryNavigator = createStackNavigator(
 );
 
 class Main extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     campsites: CAMPSITES,
-  //     selectedCampsite: null,
-  //   };
-  // }
-
-  // onCampsiteSelect(campsiteId) {
-  //   this.setState({ selectedCampsite: campsiteId });
-  // }
-
   render() {
     return (
       <View
         style={{
           flex: 1,
           paddingTop:
-            Platform.OS === 'ios' ? 0 : ExpoStatusBar.Constants.statusBarHeight,
+            Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight,
         }}
       >
         <DirectoryNavigator />
